@@ -43,3 +43,37 @@ function getOneArticle($article_id)
 
     return $uniqueArticle;
 }
+
+
+function getArticleWithCategory($article_id)
+{
+
+    global $pdo;
+    $sql = 'SELECT articles.*, categories.label, categories.color 
+    FROM articles
+    JOIN categories ON articles.category_id = categories.id
+    WHERE articles.id = :article_id';
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        ':article_id' => $article_id,
+    ]);
+    $articleWithCategory = $stmt->fetch(); //fetch : position de l'article à partir index articles = 0;
+
+    return $articleWithCategory;
+}
+
+function getArticlesWithCategory()
+{
+
+    global $pdo;
+
+    $sql = 'SELECT articles.*, categories.label, categories.color 
+            FROM articles
+            JOIN categories ON articles.category_id = categories.id';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $articlesAndCategory = $stmt->fetchAll();
+
+    return $articlesAndCategory;
+}

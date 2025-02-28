@@ -1,45 +1,48 @@
-<?php include_once 'components/header.php' ?>
-
 <?php
 // require 'db/article-db.php';
 // $articles = getArticles();
-//     $uniqueArticle = getOneArticle($article_id);
+// $uniqueArticle = getOneArticle($article_id);
 // 
-require 'db/category-db.php';
-$articles = getArticlesWithCategory();
-?>
+require 'db/article-db.php';
+$id = $_GET['id'];
 
-<?php
+$article =  getArticleWithCategory($id);
 
-$article_position = $_GET['id']; //prend les string comme name et ce n'importe où dans le dossier parce que c'est une variable globale
-$uniqueArticle = $articles[$article_position];
 
 ?>
+
+
+<?php include_once 'components/header.php' ?>
+
 
 <main>
-    <div>
-        <img src='<?php echo $uniqueArticle['image'] ?>' alt='<?php $uniqueArticle['slug'] ?>'>
-    </div>
+    <div class="container">
 
-    <h1><?php echo $uniqueArticle['title']; ?></h1>
 
-    <ul>
-        <li><?php echo $uniqueArticle['label']; ?></li>
-        <li><?php echo $uniqueArticle['published_at']; ?></li>
-    </ul>
+        <div>
+            <img src='<?php echo $article['image'] ?>' alt='<?php $article['slug'] ?>'>
+        </div>
 
-    <p><?php echo $uniqueArticle['content']; ?></p>
+        <h1><?php echo $article['title']; ?></h1>
 
-    <ul>
-        <li><?php echo $uniqueArticle['author']; ?></li>
-    </ul>
+        <ul class="list-inline">
+            <li class="list-inline-item"><?php echo $article['label']; ?></li>
+            <li class="list-inline-item"><?php echo $article['published_at']; ?></li>
+        </ul>
 
-    <div>
-        <h2>Commentaires section</h2>
-        <?php
-        $article_id = $uniqueArticle['id'];
-        require 'components/art-comment.php';
-        ?>
+        <p><?php echo $article['content']; ?></p>
+
+        <ul>
+            <li><?php echo $article['author']; ?></li>
+        </ul>
+
+        <div>
+            <h2>Commentaires section</h2>
+            <?php
+            $article_id = $article['id'];
+            require 'components/art-comment.php';
+            ?>
+        </div>
     </div>
 </main>
 
