@@ -21,18 +21,18 @@ $article =  getArticleWithCategory($id);
     <div class="container">
 
 
-        <div>
+        <div class="mb-4">
             <img src='<?php echo $article['image'] ?>' alt='<?php $article['slug'] ?>' classe="w-60">
         </div>
 
         <h1><?php echo $article['title']; ?></h1>
 
         <ul class="list-inline">
-            <li class="list-inline-item"><?php echo $article['label']; ?></li>
+            <li class="list-inline-item"><span class="rounded-pill p-2 text-white" style="background-color:<?php echo $article['color'] ?>;"><?php echo $article['label'] ?></span></li>
             <li class="list-inline-item"><?php echo $article['published_at']; ?></li>
         </ul>
 
-        <p><?php echo $article['content']; ?></p>
+        <p class="mt-4"><?php echo $article['content']; ?></p>
 
         <ul>
             <li><?php echo $article['author']; ?></li>

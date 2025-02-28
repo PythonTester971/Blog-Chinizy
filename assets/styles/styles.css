@@ -47,3 +47,10 @@ h1{
     justify-self:center;
     
 }
+
+.card-image {
+
+    width:300px;
+    height:200px;
+    max-width:100%;
+}
