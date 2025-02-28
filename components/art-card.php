@@ -1,4 +1,4 @@
-<?php require_once 'db/category-db.php' ?>
+<?php require_once 'db/article-db.php' ?>
 
 
 <div class="card">

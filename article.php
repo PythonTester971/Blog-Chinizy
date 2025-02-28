@@ -1,9 +1,12 @@
 <?php
-// require 'db/article-db.php';
-// $articles = getArticles();
-// $uniqueArticle = getOneArticle($article_id);
-// 
+
 require 'db/article-db.php';
+
+
+
+
+
+
 $id = $_GET['id'];
 
 $article =  getArticleWithCategory($id);
@@ -14,13 +17,12 @@ $article =  getArticleWithCategory($id);
 
 <?php include_once 'components/header.php' ?>
 
-
 <main>
     <div class="container">
 
 
         <div>
-            <img src='<?php echo $article['image'] ?>' alt='<?php $article['slug'] ?>'>
+            <img src='<?php echo $article['image'] ?>' alt='<?php $article['slug'] ?>' classe="w-60">
         </div>
 
         <h1><?php echo $article['title']; ?></h1>
@@ -45,5 +47,7 @@ $article =  getArticleWithCategory($id);
         </div>
     </div>
 </main>
+
+
 
 <?php include_once 'components/footer.php' ?>

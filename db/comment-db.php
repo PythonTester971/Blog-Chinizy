@@ -15,3 +15,18 @@ function getCommentsOneArticle($article_id)
 
     return $commentsOneArticle;
 }
+
+
+function createComment($author, $message, $articleid)
+{
+    global $pdo;
+
+    $sql = 'INSERT INTO comments(author, content, article_id)
+    VALUES(:author,:content,:articleid)';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        ':author' => $author,
+        ':content' => $message,
+        ':articleid' => $articleid
+    ]);
+}
