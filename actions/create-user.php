@@ -11,7 +11,9 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
 
     $password = $_POST['password'];
 
-    $createdUser = createUser($username, $email, $password);
+    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+    $createdUser = createUser($username, $email, $passwordHash);
 
     header("Location: /user-creation.php");
     die();
