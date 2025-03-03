@@ -1,0 +1,9 @@
+si sur la page archive une catégorie est sélectionnée
+
+récupére la valeur de l'option sélectionnée avec un post via le form/select
+
+utiliser cette valeur dans une variable qui entrera en paramètre 
+de la fonction de récupération getArticlesByCategory
+
+si telle categorie est sélectionnée 
+faire une boucle sur les cartes avec les informations des articles concernés
