@@ -18,9 +18,5 @@ try {
 
 } catch (PDOException $e) {
     print('Erreur : ' . $e->getMessage());
-    echo 'Tout est cassé !!!';
+    // echo 'Tout est cassé !!!';
 }
-
-
-?>
-

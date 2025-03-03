@@ -1,9 +1,7 @@
-<?php include_once './components/header.php' ?>
-<?php require_once 'db/article-db.php';
+<?php include_once './components/header.php';
+require_once 'db/article-db.php';
 
 $articles = getArticlesWithCategory();
-
-
 
 ?>
 

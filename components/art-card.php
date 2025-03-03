@@ -9,8 +9,11 @@
     </div>
     <ul class="list-group list-group-flush">
 
-        <li class="list-group-item"><span class="rounded-pill p-2 text-white" style="background-color:<?php echo $article['color'] ?>;"><?php echo $article['label'] ?></span></li>
-        <li class="list-group-item">By an <?php echo $article['author'] ?></li>
+        <li class="list-group-item">
+            <span class="rounded-pill p-2 text-white" style="background-color:<?php echo $article['color'] ?>;"><?php echo $article['label'] ?>
+            </span>
+        </li>
+        <li class="list-group-item">By <?php echo $article['author'] ?></li>
         <li class="list-group-item"><?php echo $article['published_at'] ?></li>
     </ul>
     <div class="card-body">

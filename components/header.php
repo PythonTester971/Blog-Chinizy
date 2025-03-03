@@ -30,21 +30,16 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="../archives.php">Archives</a>
                             </li>
-                            <div class="dropdown">
-                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown link
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </div>
-                            <form class="d-flex mt-3" role="search">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../user-creation.php">Créer un compte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../article-creation.php">Rédiger un article</a>
+                            </li>
+                            <!-- <form class="d-flex mt-3" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
+                            </form> -->
                     </div>
                 </div>
             </div>
